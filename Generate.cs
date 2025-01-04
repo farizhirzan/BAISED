@@ -58,7 +58,7 @@ public class Generate : MonoBehaviour
         }
 
         var client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Authorization", "Token r8_0D3MzXy3oqHGCIYkO0VjdBCz8VFFPMN29wcjq");
+        client.DefaultRequestHeaders.Add("Authorization", "your token here");
 
         var request = new HttpRequestMessage(HttpMethod.Post, "https://api.replicate.com/v1/predictions");
         var content = new StringContent(JsonConvert.SerializeObject(new
@@ -105,7 +105,7 @@ public class Generate : MonoBehaviour
             await Task.Delay(1000); // Poll every 1 second
 
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Authorization", "Token r8_0D3MzXy3oqHGCIYkO0VjdBCz8VFFPMN29wcjq");
+            client.DefaultRequestHeaders.Add("Authorization", "");
 
             var request = new HttpRequestMessage(HttpMethod.Get, "https://api.replicate.com/v1/predictions/" + idrequest);
 
